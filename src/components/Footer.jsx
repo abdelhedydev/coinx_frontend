@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 
-import './app.css';
+import '../styles/footer.css';
 
 const Footer = () => (
   <Grid columns={3}>

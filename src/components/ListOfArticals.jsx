@@ -15,9 +15,7 @@ const ArticalsList = () => {
     <div>
       <Grid>
         <Grid.Row columns={4}>
-
           {articles }
-
         </Grid.Row>
       </Grid>
 

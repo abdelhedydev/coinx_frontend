@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Image, Input } from 'semantic-ui-react';
 import Login from './Login';
 import SignUp from './SignUp';
-import './app.css';
+import '../styles/header.css';
 const Header = () =>
   (
     <Grid className="header">
