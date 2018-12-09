@@ -11,6 +11,7 @@ import { authorise } from './actions/authActions';
 import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import AddProduct from './components/AddProduct';
 import ShowCard from './components/ShowCard';
 
 const App = (props) => (
@@ -19,6 +20,7 @@ const App = (props) => (
     <BrowserRouter>
       <Switch>
         <Route path="/" exact render={({ history }) => <Home {...history} addToCart={props.addToCart} />} />
+        <Route path="/add-product" exact component={AddProduct} />
         <Route path="/articles/:idArticle" render={({ match: { params } }) => <ShowCard showCardId={params.idArticle} addToCart={props.addToCart} />} />
       </Switch>
     </BrowserRouter>
