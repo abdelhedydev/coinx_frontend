@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { ApolloProvider } from 'react-apollo';
-import ApolloClient from 'apollo-boost';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
@@ -18,9 +16,6 @@ import Footer from './components/Footer';
 import AddProduct from './components/AddProduct';
 import ShowCard from './components/ShowCard';
 
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
-});
 const App = (props) => (
   <div>
     <BrowserRouter>
