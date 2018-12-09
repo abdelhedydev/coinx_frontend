@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, Form } from 'semantic-ui-react';
+import { Button, Modal, Form, Icon } from 'semantic-ui-react';
 import gql from 'graphql-tag';
 import { Mutation } from 'react-apollo';
 
@@ -17,7 +17,13 @@ const SignUp = () => (
   <div>
     <Mutation mutation={ADD_USER}>
       {(register) => (
-        <Modal trigger={<Button>Inscrivez vous</Button>}>
+        <Modal
+          trigger={
+            <Button icon labelPosition="left" style={{ height: '36px' }}>
+              <Icon name="user" />
+              Inscription
+            </Button>}
+        >
           <Modal.Header>Inscrivez vous</Modal.Header>
           <Modal.Description>
             <Form

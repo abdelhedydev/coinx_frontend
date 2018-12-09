@@ -15,7 +15,7 @@ const CardExampleCard = ({ item, history }) => {
   return (
     <div style={{ marginBottom: '30px' }}>
       <Card onClick={() => { history.push(`/articles/${id}`); }}>
-        <Image src={image} />
+        <Image src={image} style={{ height: '250px' }} />
         <Card.Content>
           <Card.Header>{title} </Card.Header>
           <Card.Meta>

@@ -1,8 +1,14 @@
 import React from 'react';
-import { Button, Modal, Form, Divider } from 'semantic-ui-react';
+import { Button, Modal, Form, Divider, Icon } from 'semantic-ui-react';
 
 const Login = () => (
-  <Modal trigger={<Button>Connectez vous</Button>}>
+  <Modal
+    trigger={
+      <Button icon labelPosition="left" style={{ height: '36px' }} color="green">
+        <Icon name="sign-in" />
+        Connexion
+      </Button>}
+  >
     <Modal.Header>Connectez vous</Modal.Header>
     <Modal.Description>
       <Form style={{ padding: '2px' }}>

@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button, Icon } from 'semantic-ui-react';
+
 import { NavLink } from 'react-router-dom';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
@@ -19,7 +21,7 @@ const VALIDATE_ORDER = gql`
 function Basket({ basketItems, totalPrice, remove }) {
   const basketTab = (basketItems.length !== 0) ? basketItems.map((element) => (
     <BasketItem key={element.id} element={element} remove={remove} />
-  )) : <TR><Td colSpan="5">Cart is empty</Td></TR>;
+  )) : <TR><Td colSpan="5">Le Panier est Vide !</Td></TR>;
 
   const removeAll = () => {
     basketItems.forEach((element) => {
@@ -27,46 +29,53 @@ function Basket({ basketItems, totalPrice, remove }) {
     });
   };
   return (
-    <CONTAINER theme={{ width: '70%' }} style={{ paddingLeft: '15%' }}>
-      <CONTAINER>
-        <TABLE>
-          <thead>
-            <TR>
-              <TH>Name</TH><TH>Price</TH><TH>Quantity</TH><TH>Total</TH><TH>Actions</TH>
-            </TR>
-          </thead>
-          <tbody>
-            {basketTab}
-            <TR><Td colSpan="3">Total</Td><Td>{ totalPrice }</Td></TR>
-          </tbody>
-        </TABLE>
-      </CONTAINER>
-      <Mutation
-        mutation={VALIDATE_ORDER}
-        variables={{
-          order: {
-            products: basketItems,
-            totalPrice,
-            user: sessionStorage.getItem('user'),
-          },
-        }}
-      >
-        {
-          (validateOrder) =>
-            (
-              <BUTTON
-                theme={{ width: '20%' }}
-                onClick={async () => {
-                  await validateOrder();
-                  removeAll();
-                }}
-              >
-              Validate Order
-              </BUTTON>)
-        }
-      </Mutation>
-      <NavLink to="order-history"> History </NavLink>
-    </CONTAINER>
+    <React.Fragment>
+      <NavLink to="/profile/125">
+        <Button style={{ marginLeft: '40px' }} ><Icon name="user" />Profil</Button>
+      </NavLink>
+      <CONTAINER theme={{ width: '70%' }} style={{ paddingLeft: '15%' }}>
+
+        <CONTAINER>
+          <TABLE>
+            <thead style={{ color: 'grey' }}>
+              <TR>
+                <TH>Produit</TH><TH>Points</TH><TH>Quantité</TH><TH>Total</TH><TH>Actions</TH>
+              </TR>
+            </thead>
+            <tbody>
+              {basketTab}
+              <TR><Td colSpan="3">Total</Td><Td>{totalPrice}</Td></TR>
+            </tbody>
+          </TABLE>
+        </CONTAINER>
+        <Mutation
+          mutation={VALIDATE_ORDER}
+          variables={{
+            order: {
+              products: basketItems,
+              totalPrice,
+              user: sessionStorage.getItem('user'),
+            },
+          }}
+        >
+          {
+            (validateOrder) =>
+              (
+                <BUTTON
+                  theme={{ width: '20%' }}
+                  color="grey"
+                  onClick={async () => {
+                    await validateOrder();
+                    removeAll();
+                  }}
+                >
+                Valider la Liste
+                </BUTTON>)
+          }
+        </Mutation>
+        <NavLink to="order-history"> Historique </NavLink>
+      </CONTAINER >
+    </React.Fragment>
   );
 }
 

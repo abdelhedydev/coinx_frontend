@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Image } from 'semantic-ui-react';
 import Review from './Review';
-import Productlist from './ListOfArticals';
+// import Productlist from './ListOfArticals';
 
 const Profile = () => (
   <div style={{ marginTop: '50px' }}>
@@ -18,7 +18,7 @@ const Profile = () => (
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>
-        <Productlist />
+        {/* <Productlist /> */}
       </Grid.Row>
       <Grid.Row>
         <Review />

@@ -12,9 +12,9 @@ const Header = ({ articleCount }) => {
   return (
     <Grid className="header">
       <Grid.Column width={2}>
-        <Image className="img" src="/images/coinx.png" />
-        {articleCount}
-        <NavLink to="/basket"> Cart </NavLink>
+        <NavLink to="/">
+          <Image className="img" src="/images/picto/icon.png" style={{ width: '102px', marginLeft: '25px' }} />
+        </NavLink>
       </Grid.Column>
       <Grid.Column width={8}>
         <Input className="search" style={{ width: '70%', height: '50%' }} placeholder="Rechercher..." />
@@ -26,7 +26,9 @@ const Header = ({ articleCount }) => {
         <SignUp />
       </Grid.Column>
       <Grid.Column width={1}>
-        <i className="shopping cart icon">{articleCount}</i>
+        <NavLink to="/basket">
+          <i className="shopping cart icon" style={{ paddingLeft: '20px' }} color="black">{articleCount}</i>
+        </NavLink>
       </Grid.Column>
     </Grid>
 

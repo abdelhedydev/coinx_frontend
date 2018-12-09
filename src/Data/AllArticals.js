@@ -1,6 +1,6 @@
 export const Articals = [
   {
-    image: '/images/1.jpg',
+    image: 'https://images.finishline.com/is/image/FinishLine/B42199_GBK?$Main_gray$',
     id: '1',
     userName: 'John',
     title: 'shoes',
@@ -16,7 +16,7 @@ export const Articals = [
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
   },
   {
-    image: '/images/2.jpg',
+    image: 'https://i1.adis.ws/i/jpl/jd_062864_a?qlt=80&w=600&h=425&v=1',
     id: '3',
     userName: 'Marshal',
     title: 'shoes',
@@ -24,7 +24,7 @@ export const Articals = [
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
   },
   {
-    image: '/images/2.jpg',
+    image: 'https://i1.adis.ws/i/jpl/sz_062068_a?qlt=80&w=600&h=674&v=1',
     id: '4',
     userName: 'Dwayne',
     title: 'shoes',
@@ -40,7 +40,7 @@ export const Articals = [
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
   },
   {
-    image: '/images/2.jpg',
+    image: 'https://assets.adidas.com/images/w_280,h_280,f_auto,q_90,fl_lossy/c2a56cd0e96a43c68285a96d010e5a0b_9366/adidas-originals-by-aw-turnout-trainer-shoes.jpg',
     id: '6',
     userName: 'Sadio',
     title: 'shoes',
@@ -59,14 +59,6 @@ export const Articals = [
     image: '/images/4.jpg',
     id: '8',
     userName: 'Harry',
-    title: 'shoes',
-    price: '200',
-    desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
-  },
-  {
-    image: '/images/5.jpg',
-    id: '9',
-    userName: 'Megan',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
