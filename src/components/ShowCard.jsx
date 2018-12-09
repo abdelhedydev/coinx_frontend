@@ -21,7 +21,8 @@ const ShowCard = ({ showCardId, addToCart, history }) => {
             <div style={{ width: '60%', marginBottom: '10px' }}>
               <p>{DataProd.desc}</p>
             </div>
-            <div>{DataProd.price}</div>
+            <div> <h4>Price:</h4> {DataProd.price}  CX</div>
+
             <Button style={{ marginTop: '50px' }} onClick={() => { addToCart(DataProd, 1); }} >Add to cart</Button>
             <Button style={{ marginTop: '50px' }} onClick={() => history.goBack()} >Back</Button>
           </Grid.Column>

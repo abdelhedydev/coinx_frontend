@@ -16,14 +16,17 @@ const Header = ({ articleCount }) => {
         {articleCount}
         <NavLink to="/basket"> Cart </NavLink>
       </Grid.Column>
-      <Grid.Column width={10}>
-        <Input className="search" style={{ width: '70%' }} placeholder="Search..." />
+      <Grid.Column width={8}>
+        <Input className="search" style={{ width: '70%', height: '50%' }} placeholder="Search..." />
       </Grid.Column>
       <Grid.Column width={2}>
         <Login />
       </Grid.Column>
       <Grid.Column width={2}>
         <SignUp />
+      </Grid.Column>
+      <Grid.Column width={2}>
+        <i className="shopping cart icon">{articleCount}</i>
       </Grid.Column>
     </Grid>
   );

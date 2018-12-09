@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Image } from 'semantic-ui-react';
 
 const CardExampleCard = ({ item, history }) => {
   const {
@@ -25,8 +25,8 @@ const CardExampleCard = ({ item, history }) => {
         </Card.Content>
         <Card.Content extra>
           <a href="/">
-            <Icon name="user" />
             {price}
+            <img src="/images/picto/pictoIcon.png" style={{ width: '24px', marginLeft: '10px' }} alt="" />
           </a>
         </Card.Content>
       </Card>
