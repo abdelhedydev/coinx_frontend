@@ -5,7 +5,7 @@ import { createUploadLink } from 'apollo-upload-client';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import thunk from 'redux-thunk';
 // eslint-disable-next-line import/no-unresolved
-import { shoppingCartReducer } from './Recducers/shoppingCartReducer';
+import shoppingCartReducer from './Recducers/shoppingCartReducer';
 import authReducer from './Recducers/authReducer';
 
 
