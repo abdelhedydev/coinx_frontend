@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { ApolloProvider } from 'react-apollo';
+import ApolloClient from 'apollo-boost';
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -13,17 +16,22 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ShowCard from './components/ShowCard';
 
+const client = new ApolloClient({
+  uri: 'http://localhost:4000/',
+});
 const App = (props) => (
-  <div>
-    <Header articleCount={props.articleCount} />
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact render={({ history }) => <Home {...history} addToCart={props.addToCart} />} />
-        <Route path="/articles/:idArticle" render={({ match: { params } }) => <ShowCard showCardId={params.idArticle} addToCart={props.addToCart} />} />
-      </Switch>
-    </BrowserRouter>
-    <Footer />
-  </div>
+  <ApolloProvider client={client}>
+    <div>
+      <Header articleCount={props.articleCount} />
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact render={({ history }) => <Home {...history} addToCart={props.addToCart} />} />
+          <Route path="/articles/:idArticle" render={({ match: { params } }) => <ShowCard showCardId={params.idArticle} addToCart={props.addToCart} />} />
+        </Switch>
+      </BrowserRouter>
+      <Footer />
+    </div>
+  </ApolloProvider>
 );
 
 App.propTypes = {

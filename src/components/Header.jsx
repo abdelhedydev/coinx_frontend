@@ -10,11 +10,10 @@ const Header = ({ articleCount }) => {
   console.log(articleCount);
   return (
     <Grid className="header">
-      <Grid.Column width={2}>
-        <Image className="img" src="/images/coinx.png" />
-        {articleCount}
+      <Grid.Column centered width={2}>
+        <Image className="img" src="/images/picto/icon.png" style={{ width: '70%', margin: 'auto' }} />
       </Grid.Column>
-      <Grid.Column width={10}>
+      <Grid.Column width={8}>
         <Input className="search" style={{ width: '70%' }} placeholder="Search..." />
       </Grid.Column>
       <Grid.Column width={2}>
@@ -22,6 +21,9 @@ const Header = ({ articleCount }) => {
       </Grid.Column>
       <Grid.Column width={2}>
         <SignUp />
+      </Grid.Column>
+      <Grid.Column width={2}>
+        <i className="shopping cart icon">{articleCount}</i>
       </Grid.Column>
     </Grid>
   );
