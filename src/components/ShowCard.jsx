@@ -6,7 +6,7 @@ import { Grid, Image, Button } from 'semantic-ui-react';
 import { Articals } from '../Data/AllArticals';
 
 
-const ShowCard = ({ showCardId, history }) => {
+const ShowCard = ({ showCardId, addToCart, history }) => {
   const DataProd = find(Articals, { id: showCardId });
   return (
     <div style={{ margin: '80px' }}>
@@ -22,7 +22,7 @@ const ShowCard = ({ showCardId, history }) => {
               <p>{DataProd.desc}</p>
             </div>
             <div>{DataProd.price}</div>
-            <Button style={{ marginTop: '50px' }} >Add to cart</Button>
+            <Button style={{ marginTop: '50px' }} onClick={() => { addToCart(DataProd, 1); }} >Add to cart</Button>
             <Button style={{ marginTop: '50px' }} onClick={() => history.goBack()} >Back</Button>
           </Grid.Column>
         </Grid.Row>
@@ -33,6 +33,7 @@ const ShowCard = ({ showCardId, history }) => {
 
 ShowCard.propTypes = {
   showCardId: PropTypes.string,
+  addToCart: PropTypes.func,
   history: PropTypes.object,
 };
 

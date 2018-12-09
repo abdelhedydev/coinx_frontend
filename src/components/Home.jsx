@@ -1,16 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ListOfArticals from './ListOfArticals';
 import SliderComp from './SimpleSlider';
-import Footer from './Footer';
-import Header from './Header';
-const Home = () => (
+const Home = ({ addToCart }) => (
   <div>
-    <Header />
     <SliderComp />
     <div style={{ margin: '50px' }} >
-      <ListOfArticals />
+      <ListOfArticals addToCart={addToCart} />
     </div>
-    <Footer />
   </div>
 );
+
+Home.propTypes = {
+  addToCart: PropTypes.func,
+};
+
 export default Home;

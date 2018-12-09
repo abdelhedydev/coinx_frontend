@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import { ADD_TO_CART, REMOVE_FROM_CART } from '../actions/types';
 
 const initialState = {
@@ -7,6 +8,7 @@ const initialState = {
 };
 
 export const shoppingCartReducer = (state = initialState, action) => {
+  console.log(action);
   switch (action.type) {
     // eslint-disable-next-line no-case-declarations
     case ADD_TO_CART:
