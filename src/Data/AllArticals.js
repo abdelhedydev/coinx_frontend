@@ -2,7 +2,7 @@ export const Articals = [
   {
     image: '/images/1.jpg',
     id: '1',
-    userName: 'X',
+    userName: 'John',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
@@ -10,7 +10,7 @@ export const Articals = [
   {
     image: '/images/2.jpg',
     id: '2',
-    userName: 'X',
+    userName: 'Johnny',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
@@ -18,7 +18,7 @@ export const Articals = [
   {
     image: '/images/2.jpg',
     id: '3',
-    userName: 'X',
+    userName: 'Marshal',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
@@ -26,7 +26,7 @@ export const Articals = [
   {
     image: '/images/2.jpg',
     id: '4',
-    userName: 'X',
+    userName: 'Dwayne',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
@@ -34,7 +34,7 @@ export const Articals = [
   {
     image: '/images/2.jpg',
     id: '5',
-    userName: 'X',
+    userName: 'Adam',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
@@ -42,7 +42,7 @@ export const Articals = [
   {
     image: '/images/2.jpg',
     id: '6',
-    userName: 'X',
+    userName: 'Sadio',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
@@ -50,7 +50,7 @@ export const Articals = [
   {
     image: '/images/3.jpg',
     id: '7',
-    userName: 'X',
+    userName: 'Winks',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
@@ -58,7 +58,7 @@ export const Articals = [
   {
     image: '/images/4.jpg',
     id: '8',
-    userName: 'X',
+    userName: 'Harry',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',
@@ -66,7 +66,7 @@ export const Articals = [
   {
     image: '/images/5.jpg',
     id: '9',
-    userName: 'X',
+    userName: 'Megan',
     title: 'shoes',
     price: '200',
     desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, suscipit dicta rerum assumenda accusamus cumque vero ipsam laborum ab iure possimus necessitatibus atque! Quam necessitatibus obcaecati minus molestiae, mollitia eaque.',

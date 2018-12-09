@@ -29,6 +29,7 @@ const Header = ({ articleCount }) => {
         <i className="shopping cart icon">{articleCount}</i>
       </Grid.Column>
     </Grid>
+
   );
 };
 
