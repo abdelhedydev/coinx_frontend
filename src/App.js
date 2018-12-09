@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { ApolloProvider } from 'react-apollo';
-import ApolloClient from 'apollo-boost';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
@@ -11,45 +9,50 @@ import 'semantic-ui-css/semantic.min.css';
 
 import { addToCart, removeFromCart } from './actions/basketActions';
 import { authorise } from './actions/authActions';
+import Basket from './components/Basket';
 import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import AddProduct from './components/AddProduct';
 import ShowCard from './components/ShowCard';
 import Profile from './components/Profile';
 
-const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
-});
 const App = (props) => (
-  <ApolloProvider client={client}>
-    <div>
-      <Header articleCount={props.articleCount} />
-      <BrowserRouter>
+  <div>
+    <BrowserRouter>
+      <div>
+        <Header
+          articleCount={props.itemsCount}
+          basketItems={props.items}
+          totalPrice={props.totalPrice}
+          remove={props.removeFromCart}
+        />
         <Switch>
           <Route path="/" exact render={({ history }) => <Home {...history} addToCart={props.addToCart} />} />
+          <Route path="/add-product" exact component={AddProduct} />
           <Route path="/articles/:idArticle" render={({ match: { params } }) => <ShowCard showCardId={params.idArticle} addToCart={props.addToCart} />} />
           <Route path="/profile/:idProfile" render={({ match: { params } }) => <Profile profileId={params.Profile} />} />
-
+          <Route path="/basket" render={() => <Basket basketItems={props.items} remove={props.removeFromCart} totalPrice={props.totalPrice} addToCart={props.addToCart} isAuthenticated={props.isAuthenticated} />} />
         </Switch>
-      </BrowserRouter>
-      <Footer />
-    </div>
-  </ApolloProvider>
+      </div>
+    </BrowserRouter>
+    <Footer />
+  </div>
 );
 
 App.propTypes = {
   addToCart: PropTypes.func.isRequired,
   authorise: PropTypes.func.isRequired,
   removeFromCart: PropTypes.func.isRequired,
-  articles: PropTypes.array.isRequired,
+  items: PropTypes.array.isRequired,
   totalPrice: PropTypes.number.isRequired,
-  articleCount: PropTypes.number.isRequired,
+  itemsCount: PropTypes.number.isRequired,
   isAuthenticated: PropTypes.bool.isRequired,
 };
 
 const mapStateToprops = (state) => ({
-  articles: state.shoppingCartReducer.articles,
-  articleCount: state.shoppingCartReducer.articleCount,
+  items: state.shoppingCartReducer.items,
+  itemsCount: state.shoppingCartReducer.itemsCount,
   totalPrice: state.shoppingCartReducer.totalPrice,
   removeFromCart: state.shoppingCartReducer.removeFromCart,
   isAuthenticated: state.authReducer.isAuthenticated,

@@ -1,19 +1,19 @@
 import { ADD_TO_CART, REMOVE_FROM_CART } from './types';
 
 
-export const addToCart = (article, quantity) => (dispatch) => {
+export const addToCart = (item, quantity) => (dispatch) => {
   dispatch({
     type: ADD_TO_CART,
     payload: {
-      article,
+      item,
       quantity,
     },
   });
 };
 
-export const removeFromCart = (article) => (dispatch) => {
+export const removeFromCart = (item) => (dispatch) => {
   dispatch({
     type: REMOVE_FROM_CART,
-    payload: article,
+    payload: item,
   });
 };
