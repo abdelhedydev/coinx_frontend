@@ -9,7 +9,7 @@ import { Articals } from '../Data/AllArticals';
 const ShowCard = ({ showCardId, addToCart, history }) => {
   const DataProd = find(Articals, { id: showCardId });
   return (
-    <div style={{ margin: '80px' }}>
+    <div style={{ margin: '40px' }}>
       <Grid columns="equal">
         <Grid.Row columns={2}>
           <Grid.Column>
@@ -21,10 +21,10 @@ const ShowCard = ({ showCardId, addToCart, history }) => {
             <div style={{ width: '60%', marginBottom: '10px' }}>
               <p>{DataProd.desc}</p>
             </div>
-            <div> <h4>Price:</h4> {DataProd.price}  CX</div>
+            <div> <h4>Points:</h4> {DataProd.price}  CX</div>
 
-            <Button style={{ marginTop: '50px' }} onClick={() => { addToCart(DataProd, 1); }} >Add to cart</Button>
-            <Button style={{ marginTop: '50px' }} onClick={() => history.goBack()} >Back</Button>
+            <Button style={{ marginTop: '50px' }} onClick={() => { addToCart(DataProd, 1); }} >Ajouter au panier</Button>
+            <Button style={{ marginTop: '50px' }} onClick={() => history.goBack()} >Annuler</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>

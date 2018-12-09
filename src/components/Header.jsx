@@ -14,7 +14,7 @@ const Header = ({ articleCount }) => {
         <Image className="img" src="/images/picto/icon.png" style={{ width: '70%', margin: 'auto' }} />
       </Grid.Column>
       <Grid.Column width={8}>
-        <Input className="search" style={{ width: '70%', height: '50%' }} placeholder="Search..." />
+        <Input className="search" style={{ width: '70%', height: '50%' }} placeholder="Rechercher..." />
       </Grid.Column>
       <Grid.Column width={2}>
         <Login />
@@ -22,7 +22,7 @@ const Header = ({ articleCount }) => {
       <Grid.Column width={2}>
         <SignUp />
       </Grid.Column>
-      <Grid.Column width={2}>
+      <Grid.Column width={1}>
         <i className="shopping cart icon">{articleCount}</i>
       </Grid.Column>
     </Grid>

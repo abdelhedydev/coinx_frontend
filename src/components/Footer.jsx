@@ -19,7 +19,7 @@ const Footer = () => (
       <Grid.Column >
         <a className="link" href="/">Contactez-nous</a>
         <br />
-        <a className="link" href="/">shops</a>
+        <a className="link" href="/">Boutiques</a>
       </Grid.Column>
     </Grid.Row>
   </Grid>

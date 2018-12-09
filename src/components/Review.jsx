@@ -4,7 +4,7 @@ import { Button, Comment, Form, Header, Rating } from 'semantic-ui-react';
 const Review = () => (
   <Comment.Group>
     <Header as="h3" dividing>
-      Comments
+      Commentaires
     </Header>
 
     <Comment>
@@ -52,7 +52,7 @@ const Review = () => (
     <Form reply>
       <Form.TextArea />
       <Rating maxRating={5} clearable />
-      <Button content="Add Review" labelPosition="left" icon="edit" primary />
+      <Button content="Ajouter un avis" labelPosition="left" icon="edit" primary />
     </Form>
   </Comment.Group>
 );

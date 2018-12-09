@@ -15,6 +15,7 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ShowCard from './components/ShowCard';
+import Profile from './components/Profile';
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/',
@@ -27,6 +28,8 @@ const App = (props) => (
         <Switch>
           <Route path="/" exact render={({ history }) => <Home {...history} addToCart={props.addToCart} />} />
           <Route path="/articles/:idArticle" render={({ match: { params } }) => <ShowCard showCardId={params.idArticle} addToCart={props.addToCart} />} />
+          <Route path="/profile/:idProfile" render={({ match: { params } }) => <Profile profileId={params.Profile} />} />
+
         </Switch>
       </BrowserRouter>
       <Footer />

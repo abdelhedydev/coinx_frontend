@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Image } from 'semantic-ui-react';
 import Review from './Review';
-import Productlist from './Productlist';
+import Productlist from './ListOfArticals';
 
 const Profile = () => (
   <div style={{ marginTop: '50px' }}>
@@ -11,10 +11,10 @@ const Profile = () => (
           <Image src="https://image.flaticon.com/icons/svg/236/236832.svg" size="small" circular />
         </Grid.Column>
         <Grid.Column centered width={5}>
-          <h1>Hajer romdhani</h1>
-          <h3>developpeur full stack JS</h3>
+          <h1>Imen ben Mohamed</h1>
+          <h3>Développeur full stack JS</h3>
           <h4>Tél : 88855852</h4>
-          <p>adresse: tunis </p>
+          <p>Adresse: Tunis </p>
         </Grid.Column>
       </Grid.Row>
       <Grid.Row>

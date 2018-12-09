@@ -17,11 +17,11 @@ const SignUp = () => (
   <div>
     <Mutation mutation={ADD_USER}>
       {(register) => (
-        <Modal trigger={<Button>Sign up</Button>}>
+        <Modal trigger={<Button>Inscrivez vous</Button>}>
           <Modal.Header>Inscrivez vous</Modal.Header>
           <Modal.Description>
             <Form
-              style={{ padding: '3%' }}
+              style={{ padding: '2px' }}
               onSubmit={(e) => {
                 e.preventDefault();
                 const { email, password } = e.target.elements;
@@ -34,7 +34,7 @@ const SignUp = () => (
               </Form.Group>
               <Form.Group widths={2}>
                 <Form.Input label="E-mail" placeholder="E-mail" name="email" />
-                <Form.Input label="Password" placeholder="Password" type="password" name="password" />
+                <Form.Input label="Password" placeholder="Mot de passe" type="password" name="password" />
               </Form.Group>
               <Form.Checkbox label="J'accepte les conditions d'utilisation" />
               <Button type="submit" color="yellow">enregistrer</Button>
