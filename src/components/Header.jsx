@@ -10,11 +10,11 @@ const Header = ({ articleCount }) => {
   console.log(articleCount);
   return (
     <Grid className="header">
-      <Grid.Column centered width={2}>
+      <Grid.Column width={2}>
         <Image className="img" src="/images/picto/icon.png" style={{ width: '70%', margin: 'auto' }} />
       </Grid.Column>
       <Grid.Column width={8}>
-        <Input className="search" style={{ width: '70%' }} placeholder="Search..." />
+        <Input className="search" style={{ width: '70%', height: '50%' }} placeholder="Search..." />
       </Grid.Column>
       <Grid.Column width={2}>
         <Login />

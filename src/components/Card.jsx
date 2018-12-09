@@ -25,8 +25,8 @@ const CardExampleCard = ({ item, history }) => {
         </Card.Content>
         <Card.Content extra>
           <a href="/">
-            <img src="/images/picto/pictoIcon.png" style={{ width: '30px' }} alt="" />
             {price}
+            <img src="/images/picto/pictoIcon.png" style={{ width: '24px', marginLeft: '10px' }} alt="" />
           </a>
         </Card.Content>
       </Card>
